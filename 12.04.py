@@ -341,10 +341,10 @@ plt.grid()
 # plt.tick_params(axis="x", direction="in")
 
 #막대그래프 그리기
-x_years = ['2020', '2021', '2022']
+""" x_years = ['2020', '2021', '2022']
 y_data = [100, 400, 900]
 clr = ["r", "lime", "b"]
-
+ """
 # plt.bar(x_years, y_data)
 
 #색 지정
@@ -371,9 +371,266 @@ clr = ["r", "lime", "b"]
 # plt.yticks(y_data, y_data)
 # plt.yticks(100,200,300,400,500,600,900)
 
-plt.barh(x_years, y_data)
+""" plt.barh(x_years, y_data)
 
 #   {x축 데이터}{y축 데이터}{색설정} {위치설정} {테두리색설정} {선두께} {그래프 두께}
 plt.barh(x_years, y_data, color=clr, align="center", edgecolor="black", linewidth=3, height=0.3)
 
+plt.show() """
+
+
+#####################################################################
+#####################################################################
+#####################################################################
+##### 23.12.08
+
+
+#막대그래프 그리기
+""" x_years = ['2020', '2021', '2022']
+y_data = [100, 400, 900]
+clr = ["r", "lime", "b"]
+
+plt.bar(x_years, y_data) """
+
+#색 지정
+# plt.bar(x_years, y_data, color="g")
+# plt.bar(x_years, y_data, color="C7")
+# plt.bar(x_years, y_data, color="#000000")
+
+# plt.bar(x_years, y_data, color=clr)
+
+# plt.bar(x_years, y_data, color=clr, width=2)
+# plt.bar(x_years, y_data, color=clr, width=0.7)
+# plt.bar(x_years, y_data, color=clr, width=0.1)
+
+# plt.bar(x_years, y_data, color=clr, align="edge", width=0.5)
+# plt.bar(x_years, y_data, color=clr, align="center", width=0.5)
+
+# 라인 색 선택
+# plt.bar(x_years, y_data, color=clr, align="edge", edgecolor="black", width=3)
+
+# 테두리 라인 설정
+# plt.bar(x_years, y_data, color=clr, align="center", edgecolor="black", linewidth=3, width=0.5)
+
+# plt.xticks(x_years)
+# plt.yticks(y_data, y_data)
+# plt.yticks(100,200,300,400,500,600,900)
+
+# plt.barh(x_years, y_data)
+
+#   {x축 데이터}{y축 데이터}{색설정} {위치설정} {테두리색설정} {선두께} {그래프 두께}
+# plt.barh(x_years, y_data, color=clr, align="center", edgecolor="black", linewidth=3, height=0.3)
+
+# 막대 문양 채우기
+
+# plt.bar(x_years, y_data, color="C1", edgecolor="black", hatch="/")
+# plt.bar(x_years, y_data, color="C1", edgecolor="black", hatch="//")
+# plt.bar(x_years, y_data, color="C1", edgecolor="black", hatch="///")
+# plt.bar(x_years, y_data, color="C1", edgecolor="black", hatch="////")
+# plt.bar(x_years, y_data, color="C1", edgecolor="black", hatch="\\")
+# plt.bar(x_years, y_data, color="C1", edgecolor="black", hatch="\\\\")
+# plt.bar(x_years, y_data, color="C1", edgecolor="black", hatch="\\\\\\")
+# plt.bar(x_years, y_data, color="C1", edgecolor="black", hatch="+")
+# plt.bar(x_years, y_data, color="C1", edgecolor="black", hatch="*")
+# plt.bar(x_years, y_data, color="C1", edgecolor="black", hatch="o")
+# plt.bar(x_years, y_data, color="C1", edgecolor="black", hatch="x")
+# plt.bar(x_years, y_data, color="C1", edgecolor="black", hatch=".")
+# plt.bar(x_years, y_data, color="C1", edgecolor="black", hatch="..")
+# plt.bar(x_years, y_data, color="C1", edgecolor="black", hatch="...")
+# plt.bar(x_years, y_data, color="C1", edgecolor="black", hatch="....")
+
+# 산점도 그래프
+""" x = 1
+y = 1
+
+plt.scatter(1, 1)
+plt.scatter(x+1, y+1)
+plt.scatter(x+1, y-1)
+plt.scatter(x+2, y+1)
+plt.scatter(x+1, y+2)
+plt.scatter(x+2, y+2)
+plt.scatter(x+3, y+5)
+plt.scatter(x+1, y+4)
+
+# 색상 크기 변경
+# plt.scatter(x+1.5 , y+1.5, 100, 2)
+# plt.scatter(x+2.5 , y+1.5, 150, 3)
+# plt.scatter(x+3.5 , y+1.5, 200, 4)
+
+plt.scatter(x+1.5 , y+1.5, 100, "C1")
+plt.scatter(x+2.5 , y+1.5, 150, "red")
+plt.scatter(x+3.5 , y+1.5, 200, 4)
+
+# 포인트 설정
+#         {x}{y}{포인트크기}{색상설정}{투명}
+plt.scatter(x+1.5, y+1.5, 100, "C6", alpha=0.5)
+
+# Color map setting
+plt.scatter(x+4.5, y+1.5, 200, 4, alpha=0.5, cmap="cividis")
+plt.colorbar() """
+
+# plt.show()
+
+# Histogram
+# plt.hist({data}, bins={구간수})
+import numpy as np
+
+rn = np.random.randint(1,30,size=20)
+print(rn)
+
+# plt.hist(rn, bins=10,label="def")
+
+
+# plt.hist(rn, bins=20)
+# STYLE
+# 라벨 설정
+# plt.hist(rn,  bins=10, label="def") 
+
+# 투명도 설정
+# plt.hist(rn,  bins=10, label="def", alpha=0.5)
+
+# 그래프 스타일 설정
+# plt.hist(rn,  bins=10, label="def", alpha=0.5, histtype="step")
+# plt.hist(rn,  bins=10, label="def", alpha=0.5, histtype="stepfilled")
+# plt.hist(rn,  bins=10, label="def", alpha=0.5, histtype="barstacked")
+
+# plt.legend()
+
+#Pie_Chart
+rate = [30, 40, 20, 10]
+labels = ["Alpha", "Beta", "Gamma", "Delta"]
+
+# plat.pie({data})
+# plt.pie(rate)
+
+# Labels
+# plt.pie(rate, labels=labels)
+
+#Percetage
+# plt.pie(rate, labels=labels, autopct='%.1d%%')
+# plt.pie(rate, labels=labels, autopct='%.1f%%')
+
+# StartAngle
+# plt.pie(rate, labels=labels, autopct='%.1f%%', startangle=0)
+# plt.pie(rate, labels=labels, autopct='%.1f%%', startangle=30)
+# plt.pie(rate, labels=labels, autopct='%.1f%%', startangle=90)
+
+# Counterclock
+#                                                            시계방향으로 시작
+# plt.pie(rate, labels=labels, autopct='%.1f%%', startangle=0, counterclock=False)
+# plt.pie(rate, labels=labels, autopct='%.1f%%', startangle=0, counterclock=True)
+# plt.pie(rate, labels=labels, autopct='%.1f%%', startangle=0, counterclock=False)
+
+# 공백
+# plt.pie(rate, labels=labels, autopct='%.1f%%', explode=[0.5, 0.5, 0.5, 0.5])
+
+# Style
+# 사용가능한 스타일 키
+# print(plt.style.available)
+
+# plt.style.use("bmh")
+# plt.style.use("ggplot")
+# plt.style.use("classic")
+# plt.style.use("Solarize_Light2")
+# plt.style.use("dark_background")
+# plt.style.use("fast")
+
+# 패널 사이즈 적용
+# plt.rcParams['figure.figsize'] = (6, 3)
+
+# plt.rcParams['font.size'] = 15
+
+# plt.rcParams['lines.linewidth'] = 5
+
+# plt.rcParams['lines.linestyle'] = '--'
+
+# 위 눈금 설정
+# plt.rcParams['xtick.top'] = True
+
+# 오른 눈금 설정
+# plt.rcParams['ytick.right'] = True
+
+# 안쪽으로 눈금 설정
+# plt.rcParams['xtick.direction'] = 'in'
+# plt.rcParams['ytick.direction'] = 'in'
+
+# 눈금 길이
+# plt.rcParams['ytick.major.size'] = 12
+
+# 세부 눈금
+# plt.rcParams['xtick.minor.visible'] = True
+
+# plt.plot([2,3,6,7,10], [1,4,5,8,9])
+
+# 객체 활용
+# fig, ax = plt.subplots()
+
+# [left, bottom, width, height]
+# ax = fig.add_axes([1, 1, 0, 0])
+# ax = fig.add_axes([1, 1, 1, 1])
+# ax = fig.add_axes([0, 0, 0, 0])
+
+# plt.show()
+
+# 다중 패널 객체 생성
+# fig, ax = plt.subplots(1, 1)
+# fig, ax = plt.subplots(1, 2)
+# fig, ax = plt.subplots(2, 1)
+# fig, ax = plt.subplots(2, 2)
+# fig, ax = plt.subplots(4, 4)
+
+# 다중 패널 그래프 출력
+# x = [1,4,5,8,9]
+# y1 = [2,3,6,7,10]
+
+# fig, ax = plt.subplots(2, 2)
+
+# ax[0][0].plot(x, y1)
+# ax[0][1].plot(x, y1)
+# ax[1][1].plot(x, y1)
+# ax[1][0].plot(x, y1)
+
+# 축 공유
+# fig, ax = plt.subplots(2, 2, sharex=True)
+# fig, ax = plt.subplots(2, 2, sharey=True)
+
+# 사용 데이터
+""" x = [1,4,5,8,9]
+
+y1 = [2,3,6,7,10]
+y2 = [10,8,6,4,2]
+
+fig, ax1 = plt.subplots()
+ax1.set_xlabel("X-Data")
+ax1.set_ylabel("Y1")
+ax1.plot(x, y1, color = "blue",label="y1 Data")
+ax1.legend(loc="upper right")
+
+ax2 = ax1.twinx()
+ax2.set_ylabel("Y2")
+ax2.plot(x, y2, color = "red",label="y2 Data")  # label 출력은 legend 있어야 함
+ax2.legend(loc="lower right") """
+
+
+# 이종 그래프 출력
+x = [1,4,5,8,9]
+y1 = [2,3,6,7,10]
+y2 = [2,3,6,7,10]
+
+fig, ax1 = plt.subplots()
+
+ax1.plot(x, y1, "-o", color="C1",label="XData")
+ax1.set_xlabel("X")
+ax1.set_ylabel("Ydata")
+
+ax2 = ax1.twinx()
+ax2.bar(x, y2, color="C2",label="YData")
+ax2.set_ylabel("Y2data")
+
+ax1.legend()
+ax2.legend()
+
+
+
+# plt.tight_layout()
 plt.show()
