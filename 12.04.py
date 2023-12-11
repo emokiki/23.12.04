@@ -806,6 +806,21 @@ for page in range(1, 10):
 
 print(df_list) """
 
+# 각 지수별 종가 기준 그래프 출력
+#plt.plot(dow.index, dow.Close, "r--", label="Dow")
+#plt.plot(kospi.index, kospi.Close, "b", label="KOSPI")
+
+#최고가 기준
+#plt.plot(dow.index, dow.High, "r--", label="Dow")
+#plt.plot(kospi.index, kospi.High, "b", label="KOSPI")
+
+#gpeld
+""" d=(dow.Close / dow.Close.loc["2010-06-01"]) * 100
+k=(kospi.Close / kospi.Close.loc["2010-06-01"]) * 100
+plt.plot(d.index, d, "r--", label="Dow")
+plt.plot(k.index, k, "b", label="KOSPI") """
+
+#plt.grid(True)
 
 ## 미국 개별 종목 분석
 
@@ -815,7 +830,7 @@ import yfinance as yf
 # ticker = "MSFT" #마소 주식 예시
 
 # Apple
-ticker = "APPL"  #애플 주식 예시
+""" ticker = "APPL"  #애플 주식 예시
 start_date = "2022-01-01"
 end_date = "2023-12-02"
 
@@ -836,4 +851,36 @@ plt.title("Stock Price")
 plt.xlabel("Data")
 plt.ylabel("Price($)")
 plt.legend()
-plt.show()
+plt.show() """
+
+# 국가별 인구 데이터 분석
+
+# import BeautifulSoup as bs
+
+# url = "https://www.worldometers.info/world-population/population-by-country/"
+# response = requests.get(url)
+# soup = BeautifulSoup(response.text, "html.parser")
+
+# countries =[]
+# populations =[]
+
+# rows = soup.select("#example2 tbody tr")
+# for row in rows:
+#     columns = row.select("td")
+#     country = columns[1].get_text(strip=True)
+#     population = int(columns[2].get_text(strip=True).replace(",", ""))
+    
+#     countries.append(country)
+#     populations.append(population)
+    
+# top_countries = countries[:10]
+# top_populations = populations[:10]
+    
+# plt.barh(top_countries[::-1], top_populations[::-1], color="skyblue")
+# plt.xlabel("Population")
+# plt.title("Top 10")
+# plt.title("Stock Price")
+# plt.xlabel("Data")
+# plt.ylabel("Price($)")
+# plt.legend()
+# plt.show()
